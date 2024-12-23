@@ -60,6 +60,9 @@ Chessboard_Detection_Project/
 ├── images/         # Folder for input images
 │   ├── chessboard1.jpg
 │   ├── chessboard2.jpg
+│    ...
+│    ...
+│    
 ├── main.py         # Main program file
 ├── README.md       # Project description and usage instructions
 ```
@@ -76,22 +79,17 @@ Chessboard_Detection_Project/
     ![Aligned Chessboard](images/chessboard8_aligned.jpg)
   - Grid Cell Example:
     ![Grid Cell](images/chessboard8_grid_cell.jpg)
-
-- **Accuracy Summary**:
-  - The system achieved over 95% accuracy across 10 test cases.
-  - Table of results:
-    | Image    | Chessboard Detection Accuracy | Chess Piece Detection Accuracy | Error Rate |
-    |----------|-------------------------------|-------------------------------|------------|
-    | Test 1   | 98%                           | 96%                           | 2%         |
-    | Test 2   | 95%                           | 94%                           | 5%         |
-    | Test 3   | 96%                           | 93%                           | 4%         |
+  - Result:
+    ![Result](images/chessboard8_Result.jpg)
+  - terminal output:
+    ![terminal output](images/chessboard8_terminal_output.jpg)
 
 ---
 
 ## References
 1. Official OpenCV Documentation: [https://docs.opencv.org](https://docs.opencv.org)
-2. Masouris, Athanasios, and Jan van Gemert. "End-to-End Chess Recognition."
-3. Wölflein, Georg, and Ognjen Arandjelović. "Determining Chess Game State from an Image."
+2. Masouris, Athanasios, and Jan van Gemert. [https://arxiv.org/abs/2310.04086]("End-to-End Chess Recognition.")
+3. Wölflein, Georg, and Ognjen Arandjelović. [https://arxiv.org/abs/2104.14963]("Determining Chess Game State from an Image.")
 
 ---
 
