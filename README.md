@@ -47,12 +47,12 @@ pip install -r requirements.txt
 ---
 
 ## Usage
-1. Place your input images in the `images/` folder.
-2. Run the program:
+
+1. Run the program with the following command, providing the path to your input image:
    ```bash
-   python main.py
+   python main.py -i path_to_image
    ```
-3. The output will include:
+2. The output will include:
    - Visualizations of the input image, detected chessboard, aligned chessboard, and grid cells.
    - A printed 8x8 grid representing the positions of pieces.
 
