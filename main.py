@@ -2,7 +2,10 @@ import cv2
 import numpy as np
 
 # 讀取圖像
-image = cv2.imread('chessboard7.jpg')
+image = cv2.imread('chessboard10.jpg')
+cv2.imshow("Input Image", image)  # 顯示原始影像
+cv2.waitKey(0)
+
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # 預處理：模糊處理和邊緣檢測
@@ -26,6 +29,12 @@ for contour in contours:
 if chessboard_contour is None:
     print("未找到棋盤輪廓，請檢查圖片或調整參數！")
 else:
+    # 在原圖上繪製檢測到的棋盤輪廓
+    detected_image = image.copy()
+    cv2.drawContours(detected_image, [chessboard_contour], -1, (0, 255, 0), 3)
+    cv2.imshow("Chessboard Detection", detected_image)  # 顯示棋盤檢測結果
+    cv2.waitKey(0)
+
     points = chessboard_contour.reshape(4, 2)
     points = points[np.argsort(points[:, 1])]
     top_two = points[:2][np.argsort(points[:2, 0])]
@@ -37,6 +46,9 @@ else:
     dest_points = np.array([[0, 0], [800, 0], [800, 800], [0, 800]], dtype="float32")
     matrix = cv2.getPerspectiveTransform(src_points, dest_points)
     warped = cv2.warpPerspective(image, matrix, (800, 800))
+
+    cv2.imshow("Aligned Chessboard", warped)  # 顯示校正後的棋盤
+    cv2.waitKey(0)
 
     # 分割棋盤
     square_size = warped.shape[0] // 8
@@ -57,6 +69,11 @@ else:
             black_mask = cv2.inRange(square, (0, 0, 0), (40, 40, 40))
             white_mask = cv2.inRange(square, (220, 220, 220), (255, 255, 255))
 
+            # 顯示每個格子
+            cell_title = f"Grid Cell ({row+1},{col+1})"
+            cv2.imshow(cell_title, square)  # 顯示每個格子的圖像
+            cv2.waitKey(100)  # 每格顯示 100ms，可根據需求調整
+
             # 特徵提取
             mean_val = np.mean(square_gray)
             std_dev = np.std(square_gray)
@@ -75,6 +92,6 @@ else:
     for row in chessboard_status:
         print(row)
 
-    cv2.imshow("Detected Chessboard", warped)
+    cv2.imshow("Detected Chessboard", warped)  # 最終結果顯示
     cv2.waitKey(0)
     cv2.destroyAllWindows()
