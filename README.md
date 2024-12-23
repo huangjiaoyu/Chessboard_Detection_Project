@@ -88,8 +88,8 @@ Chessboard_Detection_Project/
 
 ## References
 1. Official OpenCV Documentation: [https://docs.opencv.org](https://docs.opencv.org)
-2. Masouris, Athanasios, and Jan van Gemert. [https://arxiv.org/abs/2310.04086](End-to-End Chess Recognition.)
-3. Wölflein, Georg, and Ognjen Arandjelović. [https://arxiv.org/abs/2104.14963](Determining Chess Game State from an Image.)
+2. Masouris, Athanasios, and Jan van Gemert. [https://arxiv.org/abs/2310.04086] (End-to-End Chess Recognition.)
+3. Wölflein, Georg, and Ognjen Arandjelović. [https://arxiv.org/abs/2104.14963] (Determining Chess Game State from an Image.)
 
 ---
 
