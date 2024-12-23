@@ -80,7 +80,7 @@ Chessboard_Detection_Project/
   - Grid Cell Example:
     ![Grid Cell](images/chessboard8_grid_cell.jpg)
   - Result:
-    ![Result](images/chessboard8_Result.jpg)
+    ![Result](images/chessboard8_result.jpg)
   - terminal output:
     ![terminal output](images/chessboard8_terminal_output.jpg)
 
