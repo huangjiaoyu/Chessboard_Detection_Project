@@ -20,13 +20,18 @@ This project demonstrates a computer vision system for detecting chessboards and
 ---
 
 ## Requirements
-- Python 3.8 or higher
-- OpenCV 4.5 or higher
-- NumPy
+
+To set up the environment, use the provided `requirements.txt` file, which includes all necessary dependencies. Ensure you have Python 3.8 or higher installed.
+
+Install the dependencies with:
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
 ## Installation
+
 1. Clone this repository:
    ```bash
    git clone https://github.com/yourusername/Chessboard_Detection_Project.git
@@ -39,7 +44,6 @@ This project demonstrates a computer vision system for detecting chessboards and
    ```bash
    pip install -r requirements.txt
    ```
-
 ---
 
 ## Usage
